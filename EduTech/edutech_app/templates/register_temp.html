@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.name.label }}<br>
+        {{ form.name }}<br>
+        {{ form.email.label }}<br>
+        {{ form.email }}<br>
+        {{ form.password.label }}<br>
+        {{ form.password }}
+        <input type="submit" value="Sign Up">
+    </form>
+</body>
+</html>
