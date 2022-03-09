@@ -1,7 +1,7 @@
 from django.contrib.auth import authenticate, login
 from django.shortcuts import render, redirect
 from django.views import View
-from edutech_app.forms import UserCreationForm
+from .forms import UserCreationForm
 
 
 class Register(View):
