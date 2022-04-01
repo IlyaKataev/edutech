@@ -1,4 +1,4 @@
-Онлайн обучение(лучшая онлайн школа России)
+Онлайн обучение (лучшая онлайн школа России)
 
 **Концепция**
 
@@ -36,3 +36,4 @@
 7) python3 manage.py makemigrations
 8) python3 manage.py migrate
 9) python3 manage.py runserver
+
