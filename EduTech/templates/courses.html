@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+{% load static %}
+
 <html>
     <head>
         <meta charset="utf-8">
@@ -6,11 +7,10 @@
         <link rel="stylesheet" href="https://snipp.ru/cdn/chosen/1.8.7/chosen.min.css">
 	    <script src="https://snipp.ru/cdn/jquery/2.1.1/jquery.min.js"></script>
 	    <script src="https://snipp.ru/cdn/chosen/1.8.7/chosen.jquery.min.js"></script>
-        <link rel="stylesheet" href="style.css">
-        <script src="main.js"></script>
+        <link rel="stylesheet" href="{% static '/css/courses.css'%}" type="text/css">
+        <script src="{% static '/js/courses.js'%}"></script>
     </head> 
     <body>
-        <header>  
         <nav>
             <ul>
                 <li><a href="">Sign out</a></li>
@@ -20,14 +20,7 @@
             </ul>
         </nav>   
         </header>
-        <nav>
-            <ul>
-                <li><a href="">Курсы</a></li>
-                <li><a href="">Информация</a></li>
-                <li><a href="">Учителя</a></li>
-                <li><a href="">Что-нибудь еще</a></li>
-            </ul>
-        </nav>
+        {% include "menu.html" %}
 
         <div class="select_wrp">
             <select class="js-chosen-1" name="city">

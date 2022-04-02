@@ -18,11 +18,20 @@ from django.urls import path, include
 from django.views.generic import TemplateView
 from edutech_app.views import Register
 from edutech_app.views import show_stream
+from edutech_app.views import show_main
+from edutech_app.views import show_info
+from edutech_app.views import show_teachers
+from edutech_app.views import show_courses
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', TemplateView.as_view(template_name='base.html'), name='home'),
     path('users/', include('django.contrib.auth.urls')),
     path('users/register/', Register.as_view(), name='register'),
-    path('stream/', show_stream)
+    path('stream/', show_stream),
+    path('courses/', show_courses),
+    path('info/', show_info),
+    path('main/', show_main),
+    path('teachers/', show_teachers),
+
 ]

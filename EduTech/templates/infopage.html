@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+{% load static %}
 <html>
     <head>
         <meta charset="utf-8">
         <title>Edutech</title>
-        <link rel="stylesheet" href="infopage.css">
+        <link rel="stylesheet" href="{% static '/css/infopage.css'%}" type="text/css">
     </head> 
     <body>
         <header>  
@@ -16,14 +16,7 @@
             </ul>
         </nav>   
         </header>
-        <nav>
-            <ul>
-                <li><a href="">Курсы</a></li>
-                <li><a href="">Главная страница</a></li>
-                <li><a href="">Учителя</a></li>
-                <li><a href="">Что-нибудь еще</a></li>
-            </ul>
-        </nav>
+        {% include "menu.html" %}
         <br><br>
         
 
