@@ -2,6 +2,7 @@ from django.contrib.auth import authenticate, login
 from django.shortcuts import render, redirect
 from django.views import View
 from .forms import UserCreationForm
+from django.http import HttpResponse
 
 
 class Register(View):
@@ -27,3 +28,6 @@ class Register(View):
             'form': form
         }
         return render(request, self.template_name, context)
+
+def show_stream(request):
+    return render(request, 'Stream/stream.html')

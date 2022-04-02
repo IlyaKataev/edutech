@@ -17,10 +17,12 @@ from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import TemplateView
 from edutech_app.views import Register
+from edutech_app.views import show_stream
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', TemplateView.as_view(template_name='base.html'), name='home'),
     path('users/', include('django.contrib.auth.urls')),
     path('users/register/', Register.as_view(), name='register'),
+    path('stream/', show_stream)
 ]
