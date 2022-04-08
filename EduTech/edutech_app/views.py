@@ -2,6 +2,7 @@ from django.contrib.auth import authenticate, login
 from django.shortcuts import render, redirect
 from django.views import View
 from .forms import UserCreationForm
+from django.http import HttpResponse
 
 
 class Register(View):
@@ -27,3 +28,41 @@ class Register(View):
             'form': form
         }
         return render(request, self.template_name, context)
+
+def get_base_context(pagename):
+    menu = [
+        {'link': '/info', 'text': 'Информация'},
+        {'link': '/courses', 'text': 'Курсы'},
+        {'link': '/main', 'text': 'Главная'},
+        {'link': '/teachers', 'text': 'Учителя'},
+    ]
+
+    return {
+        'pagename': pagename,
+        'menu': menu,
+    }
+
+
+def show_stream(request):
+    context = get_base_context('c')
+    return render(request, 'Stream/stream.html', context)
+
+
+def show_main(request):
+    context = get_base_context('c')
+    return render(request, 'mainpage.html', context)
+
+
+def show_courses(request):
+    context = get_base_context('c')
+    return render(request, 'courses.html', context)
+
+
+def show_info(request):
+    context = get_base_context('c')
+    return render(request, 'infopage.html', context)
+
+
+def show_teachers(request):
+    context = get_base_context('c')
+    return render(request, 'teachers.html', context)

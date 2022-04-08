@@ -1,8 +1,11 @@
+html{
+	font-family:Arial, monospace;
+}
 body{
     margin-top: 0;
 }
 header{
-    background: url("logo.png") no-repeat;
+    background: url("img/logo.png") no-repeat;
 }
 header h1{    
     color: whitesmoke;
@@ -20,7 +23,7 @@ header nav:before{
     height: 50px;
     width: 100%;
     background: black;
-    position: absolute;
+    position: fixed;
     left: 0;
     z-index: -1;
 }
@@ -50,16 +53,16 @@ header nav ul li a:hover{
 
 
 nav{
-    width:550px;
+    width:595px;
     margin: 20px auto;
 }
-nav::before{
+nav:before{
     content: "";
     display: block;
     height: 50px;
     width: 100%;
     background: white;
-    position: absolute;
+    position: fixed;
     left: 0;
     z-index: -1;
 }
@@ -83,21 +86,44 @@ ul li a {
 ul li a:hover {
     background: #3dd4cc;
 }
-
-
+select{
+    margin: 0;
+	text-align: left;
+	font-size: 14px;
+	position: absolute;
+	display: flex;
+	align-items: left;
+	justify-content: center;
+	padding: 2% 10%;
+}
+.select_wrp {
+	width: 520px;
+	padding:48px;
+	float: left;
+}
+button{
+    display:grid;
+    width: 300px;
+    text-align:center;
+    margin-left: 41%;
+    background: #3dd4cc;
+    border-radius: 5px;
+    font-size: 20px;
+    color: black;
+}
 
 main {
     display: flex;
-    }
+}
 
 
 section {
-    width: 50%;
+    width:50%;
     height: 40%;
     text-align: center;
     background-color: rgb(206, 206, 206);
-    margin: 5% ;
-    padding: 8%;
+    margin: 4% ;
+    padding: 7%;
     box-shadow: 3px 3px 3px rgb(66, 66, 66);
     border-radius: 40px;
 }
