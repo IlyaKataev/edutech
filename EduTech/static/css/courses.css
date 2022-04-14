@@ -4,11 +4,9 @@ html{
 body{
     margin-top: 0;
 }
-header{
-    background: url("img/logo.png") no-repeat;
-}
+
 header h1{    
-    color: whitesmoke;
+    color: rgb(255, 255, 255);
     height: 50px;
     text-align: left;
     margin: 0;

@@ -1,6 +1,24 @@
-<p>Меню:
-    {% for item in menu %}
-    <a href="{{ item.link }}">{{ item.text }}</a> |
-    {% endfor %}
+{% load static %}
+
+<header>
+        <nav>
+            <ul style="display: flex;">
+
+                <br>
+                <h1>EduTech</h1>
+
+                <img src="{% static 'img/logo.png' %}" alt="logo"/>
+                <p>Меню:
+                    {% for item in menu %}
+                        <a href="{{ item.link }}">{{ item.text }}</a> |
+                    {% endfor %}
+
+                </p>
+               |<li><a href="">Sign out</a></li>
+                <li><a href="ne">Sign in</a></li>
+
+            </ul>
+        </nav>
+</header>
 
 <hr>
