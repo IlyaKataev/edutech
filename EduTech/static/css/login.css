@@ -1,24 +1,28 @@
-html{
-	font-family:Arial, monospace;
-    
+html {
+	font-family: "Arial", monospace;
 }
-body{
+
+body {
     margin-top: 0;
 }
-header{
-    background: url("logo.png") no-repeat;
+
+header {
+    background: url("img/logo.png") no-repeat;
 }
-header h1{    
+
+header h1 {
     color: whitesmoke;
     height: 50px;
     text-align: left;
     margin: 0;
 }
-header nav{
+
+header nav {
     width: 1760px;
     margin: 0 auto;
 }
-header nav:before{
+
+header nav:before {
     content: "";
     display: block;
     height: 50px;
@@ -28,32 +32,37 @@ header nav:before{
     left: 0;
     z-index: -1;
 }
-header nav ul{
-    margin: 0 ;
+
+header nav ul {
+    margin: 0;
     padding: 0;
     list-style: none;
     height: 50px;
 }
-header nav ul li{
-    float: right;
-}
-header nav ul li a{
+
+header nav ul li a {
     color: whitesmoke;
     display: block;
     height: 50px;
-    padding:0 30px;
+    padding: 0 30px;
     text-decoration: none;
     line-height: 50px;
 }
+
 header nav ul li a:hover{
     background: #3dd4cc;
 }
 
-nav{
-    width:755px;
+header nav ul li {
+    float: right;
+}
+
+nav {
+    width: 755px;
     margin: 20px auto;
 }
-nav:before{
+
+nav:before {
     content: "";
     display: block;
     height: 50px;
@@ -63,15 +72,18 @@ nav:before{
     left: 0;
     z-index: -1;
 }
-ul{
+
+ul {
     margin: 0;
     padding: 0;
     list-style: none;
     height: 50px;
 }
+
 ul li {
     float: left;
 }
+
 ul li a {
     color: black;
     display: block;
@@ -80,10 +92,12 @@ ul li a {
     text-decoration: none;
     line-height: 50px;
 }
+
 ul li a:hover {
     background: #3dd4cc;
 }
-select{
+
+select {
     margin: 0;
 	text-align: left;
 	font-size: 14px;
@@ -93,16 +107,22 @@ select{
 	justify-content: center;
 	padding: 2% 10%;
 }
+
 .select_wrp {
 	width: 520px;
-	padding:48px;
+	padding: 48px;
 	float: left;
 }
-button{
-    display:grid;
-    width: 300px;
-    text-align:center;
-    margin-left: 41%;
+
+button {
+    display: grid;
+    width: 130px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
     background: #3dd4cc;
     border-radius: 5px;
     font-size: 20px;
@@ -114,26 +134,29 @@ main {
 }
 
 section {
-    width:50%;
+    width: 50%;
     height: 40%;
     text-align: center;
     background-color: rgb(206, 206, 206);
-    margin: 4% ;
+    margin: 4%;
     padding: 7%;
     box-shadow: 3px 3px 3px rgb(66, 66, 66);
     border-radius: 40px;
 }
-section li{
+
+section li {
     list-style: none;
 }
-section li a{
+
+section li a {
     background: #3dd4cc;
     border-radius: 5px;
     font-size: 20px;
     text-decoration: none;
     color: black;
 }
-footer{
+
+footer {
     text-align: center;
     color: whitesmoke;
     bottom: 0;
@@ -150,9 +173,9 @@ footer{
 }
 
 input[type=text], input[type=password] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
+  width: 250px;
+  padding: 10px;
+  margin: 10px 0 15px 5px;
   display: inline-block;
   border: none;
   background: #f1f1f1;
@@ -168,19 +191,20 @@ hr {
   margin-bottom: 25px;
 }
 
-.registerbtn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-}
-
-.registerbtn:hover {
-  opacity:1;
+input[type=submit] {
+  display: grid;
+    width: 130px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    background: #3dd4cc;
+    border-radius: 5px;
+    font-size: 20px;
+    color: black;
+    border: 0;
 }
 
 a {

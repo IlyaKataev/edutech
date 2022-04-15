@@ -9,16 +9,15 @@
 
                 <img src="{% static 'img/logo.png' %}" alt="logo"/>
                 <p>Меню:
-                    {% for item in menu %}
-                        <a href="{{ item.link }}">{{ item.text }}</a> |
-                    {% endfor %}
-
+                    <li><a href="{{ '/info' }}">{{ 'Информация' }}</a></li>
+                    <li><a href="{{ '/courses' }}">{{ 'Курсы' }}</a></li>
+                    <li><a href="{{ '/main' }}">{{ 'Главная' }}</a></li>
+                    <li><a href="{{ '/teachers' }}">{{ 'Учителя' }}</a></li>
+                    <li><a href="{{ '/users/login' }}">{{ 'Войти' }}</a></li>
+                    <li><a href="{{ '/users/logout' }}">{{ 'Выйти' }}</a></li>
+                    <li><a href="{{ '/users/register' }}">{{ 'Регистрация' }}</a></li>
                 </p>
-               |<li><a href="">Sign out</a></li>
-                <li><a href="ne">Sign in</a></li>
 
             </ul>
         </nav>
 </header>
-
-<hr>

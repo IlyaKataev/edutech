@@ -25,13 +25,13 @@ from edutech_app.views import show_courses
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', TemplateView.as_view(template_name='base.html'), name='home'),
+    path('', TemplateView.as_view(template_name='base.html')),
     path('users/', include('django.contrib.auth.urls')),
     path('users/register/', Register.as_view(), name='register'),
     path('stream/', show_stream),
     path('courses/', show_courses),
     path('info/', show_info),
-    path('main/', show_main),
+    path('main/', show_main, name='home'),
     path('teachers/', show_teachers),
 
 ]
