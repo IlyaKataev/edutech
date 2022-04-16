@@ -5,8 +5,9 @@
     <title>Edutech</title>
     <link rel="stylesheet" href="https://snipp.ru/cdn/chosen/1.8.7/chosen.min.css">
     <script src="https://snipp.ru/cdn/jquery/2.1.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="{% static '/css/login.css'%}" type="text/css">
     <script src="https://snipp.ru/cdn/chosen/1.8.7/chosen.jquery.min.js"></script>
+    <link rel="stylesheet" href="{% static '/css/base.css'%}" type="text/css">
+    <link rel="stylesheet" href="{% static '/css/login.css'%}" type="text/css">
 </head>
 
 <body>
@@ -49,9 +50,6 @@
   {# Assumes you setup the password_reset view in your URLconf #}
   <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
 
-  <footer>
-            <br>
-            <span> &copy; 2021-2022 | Edutech Company | Все права защищены | Политика конфиденциальности</span>
-        </footer>
+  {% include "footer.html" %}
 
 </body>

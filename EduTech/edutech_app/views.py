@@ -31,7 +31,7 @@ class Register(View):
 
 
 def show_stream(request):
-    return render(request, 'Stream/stream.html')
+    return render(request, 'stream.html')
 
 
 def show_main(request):
