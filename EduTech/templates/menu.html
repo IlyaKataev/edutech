@@ -1,23 +1,15 @@
 {% load static %}
 
 <header>
-        <nav>
-            <ul style="display: flex;">
-
-                <br>
-                <h1>EduTech</h1>
-
-                <img src="{% static 'img/logo.png' %}" alt="logo"/>
-                <p>Меню:
-                    <li><a href="{{ '/info' }}">{{ 'Информация' }}</a></li>
-                    <li><a href="{{ '/courses' }}">{{ 'Курсы' }}</a></li>
-                    <li><a href="{{ '/main' }}">{{ 'Главная' }}</a></li>
-                    <li><a href="{{ '/teachers' }}">{{ 'Учителя' }}</a></li>
-                    <li><a href="{{ '/users/login' }}">{{ 'Войти' }}</a></li>
-                    <li><a href="{{ '/users/logout' }}">{{ 'Выйти' }}</a></li>
-                    <li><a href="{{ '/users/register' }}">{{ 'Регистрация' }}</a></li>
-                </p>
-
-            </ul>
+        <div class="header__logo">
+            <a href="#"><img src="/images/logo.png"></a>
+            <h1 class="logo__name">EduTech</h1>
+            <a href="#" class="nav__link">Информация</a>
+            <a href="#" class="nav__link">Курсы</a>
+            <a href="#" class="nav__link">Учителя</a>
+        </div>
+        <nav class="nav">
+            <a href="#" class="nav__link">Sign out</a>
+            <a href="#" class="nav__link">Sign in</a>
         </nav>
 </header>

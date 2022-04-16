@@ -29,6 +29,7 @@ class Register(View):
         }
         return render(request, self.template_name, context)
 
+
 def get_base_context(pagename):
     menu = [
         {'link': '/info', 'text': 'Информация'},
@@ -54,8 +55,7 @@ def show_main(request):
 
 
 def show_courses(request):
-    context = get_base_context('c')
-    return render(request, 'courses.html', context)
+    return render(request, 'courses.html')
 
 
 def show_info(request):
