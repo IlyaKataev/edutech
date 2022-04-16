@@ -6,7 +6,6 @@ body {
     background-color: rgb(226, 223, 223);
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
-    scroll-behavior: smooth;
 }
 
 *,
@@ -67,10 +66,19 @@ h6 {
     text-decoration: none;
     margin-right: 15px;
     transition: color .3s linear;
+    -webkit-transition: color .3s linear;
+    -moz-transition: color .3s linear;
+    -ms-transition: color .3s linear;
+    -o-transition: color .3s linear;
 }
 
 .nav__link:hover {
     color: #fce38a;
+    transition: color .3s linear;
+    -webkit-transition: color .3s linear;
+    -moz-transition: color .3s linear;
+    -ms-transition: color .3s linear;
+    -o-transition: color .3s linear;
 }
 
 /* Footer */
