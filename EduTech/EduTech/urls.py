@@ -25,7 +25,7 @@ from edutech_app.views import show_courses
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', TemplateView.as_view(template_name='base.html')),
+    path('', show_main),
     path('users/', include('django.contrib.auth.urls')),
     path('users/register/', Register.as_view(), name='register'),
     path('stream/', show_stream),
