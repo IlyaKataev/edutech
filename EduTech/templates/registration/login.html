@@ -24,7 +24,7 @@
     {% endif %}
   {% endif %}
 
-  {% include "menu.html" %}
+  {% include "base/menu.html" %}
 
   <h1>Авторизация</h1>
   <p>Заполните эту форму, чтобы войти.</p>
@@ -50,6 +50,6 @@
   {# Assumes you setup the password_reset view in your URLconf #}
   <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
 
-  {% include "footer.html" %}
+  {% include "base/footer.html" %}
 
 </body>
