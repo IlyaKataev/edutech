@@ -53,11 +53,13 @@ h6 {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+
 }
 
 .logo__name {
     color: #fff;
     margin-right: 15px;
+    text-decoration: none;
 }
 
 /* Nav */
@@ -176,6 +178,8 @@ h6 {
     text-align: center;
     padding: 3px;
     align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 .pipec {
