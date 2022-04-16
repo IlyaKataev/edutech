@@ -1,15 +1,16 @@
 {% load static %}
 
-<header>
+<header class="header">
         <div class="header__logo">
-            <a href="{{ '/main' }}"><img src="/images/logo.png"></a>
-            <h1 class="logo__name">EduTech</h1>
-            <a href="/info" class="nav__link">Информация</a>
-            <a href="#" class="nav__link">Курсы</a>
-            <a href="#" class="nav__link">Учителя</a>
+            <a href="{{ '/main' }}"><img src="{% static '/img/logo.png'%}"></a>
+            <a class="logo__name" href="{{ '/main' }}"><h1>EduTech</h1></a>
+            <a class="nav__link" href="{{ '/info' }}" >Информация</a>
+            <a class="nav__link" href="{{ '/courses' }}" >Курсы</a>
+            <a class="nav__link" href="{{ '/teachers' }}" >Учителя</a>
         </div>
         <nav class="nav">
-            <a href="#" class="nav__link">Sign out</a>
-            <a href="#" class="nav__link">Sign in</a>
+            <a class="nav__link" href="{{ '/users/register' }}">Sign up</a>
+            <a class="nav__link" href="{{ '/users/login' }}" >Sign in</a>
+            <a class="nav__link" href="{{ '/users/logout' }}" >Sign out</a>
         </nav>
 </header>

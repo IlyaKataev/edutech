@@ -30,28 +30,12 @@ class Register(View):
         return render(request, self.template_name, context)
 
 
-def get_base_context(pagename):
-    menu = [
-        {'link': '/info', 'text': 'Информация'},
-        {'link': '/courses', 'text': 'Курсы'},
-        {'link': '/main', 'text': 'Главная'},
-        {'link': '/teachers', 'text': 'Учителя'},
-    ]
-
-    return {
-        'pagename': pagename,
-        'menu': menu,
-    }
-
-
 def show_stream(request):
-    context = get_base_context('c')
-    return render(request, 'Stream/stream.html', context)
+    return render(request, 'Stream/stream.html')
 
 
 def show_main(request):
-    context = get_base_context('c')
-    return render(request, 'mainpage.html', context)
+    return render(request, 'mainpage.html')
 
 
 def show_courses(request):
@@ -59,10 +43,8 @@ def show_courses(request):
 
 
 def show_info(request):
-    context = get_base_context('c')
-    return render(request, 'infopage.html', context)
+    return render(request, 'infopage.html')
 
 
 def show_teachers(request):
-    context = get_base_context('c')
-    return render(request, 'teachers.html', context)
+    return render(request, 'teachers.html')

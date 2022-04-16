@@ -32,55 +32,6 @@ h6 {
     padding: 0px 36px;
 }
 
-/* Header */
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    background-color: black;
-    padding: 5px 0;
-}
-
-.header__logo {
-    font-weight: 700;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-
-}
-
-.logo__name {
-    color: #fff;
-    margin-right: 15px;
-    text-decoration: none;
-}
-
-/* Nav */
-
-.nav {
-    display: inline-block;
-    text-transform: uppercase;
-}
-
-.nav__link {
-    font-size: 14px;
-    color: #fff;
-    text-decoration: none;
-    margin-right: 15px;
-    transition: color .3s linear;
-}
-
-.nav__link:hover {
-    color: #fce38a;
-}
-
 /* Courses */
 
 .courses {

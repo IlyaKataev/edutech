@@ -6,26 +6,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static '/css/base.css'%}" type="text/css">
     <link rel="stylesheet" href="{% static '/css/courses.css'%}" type="text/css">
     <title>EduTech</title>
 </head>
 
 <body>
 
-    <header class="header">
-        <div class="header__logo">
-            <a href="{{ '/main' }}"><img src="{% static '/img/logo.png'%}"></a>
-            <a class="logo__name" href="{{ '/main' }}"><h1>EduTech</h1></a>
-            <a class="nav__link" href="{{ '/info' }}" >Информация</a>
-            <a class="nav__link" href="{{ '/courses' }}" >Курсы</a>
-            <a class="nav__link" href="{{ '/teachers' }}" >Учителя</a>
-        </div>
-        <nav class="nav">
-            <a class="nav__link" href="#">Sign out</a>
-            <a class="nav__link" href="#" >Sign in</a>
-        </nav>
-    </header>
+    {% include "menu.html" %}
 
     <div class="container">
         <div class="search">
@@ -102,10 +90,7 @@
         </section>
     </div>
 
-    <footer class="footer">
-        <span class="footer__info"> 2021-2022 | Edutech Company | Все права защищены | Политика
-            конфиденциальности</span>
-    </footer>
+    {% include "footer.html" %}
 
 </body>
 
