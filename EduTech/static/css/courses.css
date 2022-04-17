@@ -1,3 +1,7 @@
+:root {
+    --text-color: #fff;
+}
+
 body {
     margin: 0;
     scroll-behavior: smooth;
@@ -58,7 +62,7 @@ h6 {
     position: relative;
     width: 100%;
     min-height: 444px;
-    background-color: #fff;
+    background-color: var(--text-color);
     box-shadow: rgb(0 0 0 / 15%) 2px 4px 6px;
     margin-bottom: 20px;
     border-radius: 5px;
@@ -162,5 +166,5 @@ h6 {
 }
 
 .footer__info {
-    color: #fff;
+    color: var(--text-color);
 }
