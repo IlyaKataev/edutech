@@ -48,3 +48,6 @@ def show_info(request):
 
 def show_teachers(request):
     return render(request, 'teachers.html')
+
+def show_course(request):
+    return render(request, 'course.html')

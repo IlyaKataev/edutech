@@ -22,6 +22,7 @@ from edutech_app.views import show_main
 from edutech_app.views import show_info
 from edutech_app.views import show_teachers
 from edutech_app.views import show_courses
+from edutech_app.views import show_course
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -33,5 +34,6 @@ urlpatterns = [
     path('info/', show_info),
     path('main/', show_main, name='home'),
     path('teachers/', show_teachers),
+    path('course/', show_course),
 
 ]
