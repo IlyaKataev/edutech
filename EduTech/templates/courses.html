@@ -20,9 +20,9 @@
             <input type="search" placeholder="Поиск" class="search_bar">
         </div>
 
-        <section class="courses">
+        <div class="courses">
 
-            <div class="item_course">
+            <section class="item_course">
 
                 <div class="container_avatar">
                     <div class="avatar">
@@ -59,9 +59,9 @@
                     </div>
                 </div>
 
-            </div>
+            </section>
 
-            <div class="item_course">
+            <section class="item_course">
                 <div class="container_avatar">
                     <div class="avatar">
                         <img class="img_avatar" src="{% static 'img/profile.png' %}">
@@ -73,8 +73,8 @@
                         </p>
                     </div>
                 </div>
-            </div>
-            <div class="item_course">
+            </section>
+            <section class="item_course">
                 <div class="container_avatar">
                     <div class="avatar">
                         <img class="img_avatar" src="{% static 'img/profile.png' %}">
@@ -86,8 +86,8 @@
                         </p>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </div>
 
     {% include "base/footer.html" %}
