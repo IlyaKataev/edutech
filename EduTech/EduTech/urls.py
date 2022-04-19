@@ -16,24 +16,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import TemplateView
-from edutech_app.views import Register
-from edutech_app.views import show_stream
-from edutech_app.views import show_main
-from edutech_app.views import show_info
-from edutech_app.views import show_teachers
-from edutech_app.views import show_courses
-from edutech_app.views import show_course
+import edutech_app.views as views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', show_main),
+    path('', views.show_main),
     path('users/', include('django.contrib.auth.urls')),
-    path('users/register/', Register.as_view(), name='register'),
-    path('stream/', show_stream),
-    path('courses/', show_courses),
-    path('info/', show_info),
-    path('main/', show_main, name='home'),
-    path('teachers/', show_teachers),
-    path('course/', show_course),
+    path('users/register/', views.Register.as_view(), name='register'),
+    path('stream/', views.show_stream),
+    path('courses/', views.show_courses),
+    path('info/', views.show_info),
+    path('main/', views.show_main, name='home'),
+    path('teachers/', views.show_teachers),
+    path('course/', views.show_course),
 
 ]
