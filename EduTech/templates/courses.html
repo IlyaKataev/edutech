@@ -22,6 +22,8 @@
 
         <div class="courses">
 
+            {% for item in courses %}
+
             <section class="item_course">
 
                 <div class="container_avatar">
@@ -38,55 +40,21 @@
 
                 <div class="container_course">
                     <nav class="course_tags">
-                        <div class="item_tags">Номер класса</div>
-                        <div class="item_tags">Предмет</div>
+                        <div class="item_tags">{{ item.classNumber.Number }}</div>
+                        <div class="item_tags">{{ item.subject.Name }}</div>
                         <div class="item_tags">Направление</div>
                     </nav>
-                    <h2>Название курса</h2>
+                    <h2>{{ item.Name }}</h2>
                     <div class="course_description">
-                        <p class="description">
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                            laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-                            architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-                            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-                            voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-                            consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et
-                            dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
-                            exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
-                            consequatur?
-                        </p>
+                        <p class="description">{{ item.Description }}</p>
                         <div class="btn"><a href="/course" class="pipec">Перейти</a></div>
                     </div>
                 </div>
 
             </section>
 
-            <section class="item_course">
-                <div class="container_avatar">
-                    <div class="avatar">
-                        <img class="img_avatar" src="{% static 'img/profile.png' %}">
-                        <h3>Имя Фамилия</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-                    </div>
-                </div>
-            </section>
-            <section class="item_course">
-                <div class="container_avatar">
-                    <div class="avatar">
-                        <img class="img_avatar" src="{% static 'img/profile.png' %}">
-                        <h3>Имя Фамилия</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-                    </div>
-                </div>
-            </section>
+            {% endfor %}
+
         </div>
     </div>
 

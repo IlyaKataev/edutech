@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from django.views import View
 from .forms import UserCreationForm
 from django.http import HttpResponse
+from .models import Teacher, Course, ClassNumber, Subject
 
 
 class Register(View):
@@ -30,25 +31,49 @@ class Register(View):
         return render(request, self.template_name, context)
 
 
+def get_base_context():
+    menu = [
+        {'link': '/info', 'text': 'Информация'},
+        {'link': '/courses', 'text': 'Курсы'},
+        {'link': '/main', 'text': 'Главная'},
+        {'link': '/teachers', 'text': 'Учителя'},
+    ]
+
+    courses = Course
+
+    return {
+        'menu': menu,
+        'courses': courses,
+    }
+
+
 def show_stream(request):
-    return render(request, 'stream.html')
+    context = get_base_context()
+    return render(request, 'stream.html', context)
 
 
 def show_main(request):
-    return render(request, 'mainpage.html')
+    context = get_base_context()
+    return render(request, 'mainpage.html', context)
 
 
 def show_courses(request):
-    return render(request, 'courses.html')
-
-
-def show_info(request):
-    return render(request, 'infopage.html')
-
-
-def show_teachers(request):
-    return render(request, 'teachers.html')
+    context = get_base_context()
+    teachers = Teacher.objects.all()
+    courses = Course.objects.all()
+    context['courses'] = list(courses.values())
+    return render(request, 'courses.html', context)
 
 
 def show_course(request):
     return render(request, 'course.html')
+
+
+def show_info(request):
+    context = get_base_context()
+    return render(request, 'infopage.html', context)
+
+
+def show_teachers(request):
+    context = get_base_context()
+    return render(request, 'teachers.html', context)
