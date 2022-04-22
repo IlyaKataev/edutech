@@ -2,6 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,16 +11,20 @@
     <link rel="stylesheet" href="{% static '/css/course.css'%}">
     <title>CourseTitle</title>
 </head>
+
 <body>
+
     {% include "base/menu.html" %}
+
     <div class="container">
 
         <section class="item_course">
 
             <div class="description_course">
                 <div class="course_header">
-                    <h1>Название курса</h1>
-                    <p></p>
+                    <h1>Курс по подготовке к ЕГЭ по русскому языку</h1>
+                    <p>Подготовка за полгода<br> Вы будете заниматься 2 раза в неделю по 2 академичсеких часа и пройдёте
+                        всё, что нужно до экзамена</p>
                 </div>
 
                 <div class="btn">
@@ -27,11 +32,16 @@
                 </div>
             </div>
 
-            <div class="description_teacher"></div>
+            <div class="description_teacher">
+                
+            </div>
 
         </section>
 
     </div>
+
     {% include "base/footer.html" %}
+
 </body>
+
 </html>

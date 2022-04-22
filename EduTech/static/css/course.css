@@ -18,15 +18,21 @@
 
 .course_header {
     text-align: inherit;
-
+    color: #333;
     margin-bottom: 25px;
 }
 
 .course_header > h1 {
     font-size: 44px;
     font-weight: 600;
-    color: #333;
 
+    
+    margin-bottom: 35px;
+}
+
+.course_header > p {
+    font-size: 21px;
+    font-weight: 600;
 }
 
 .btn {
@@ -36,6 +42,10 @@
     align-items: center;
 
     border: 1px solid grey;
+}
+
+.btn:hover {
+    
 }
 
 .btn_link {
@@ -48,6 +58,8 @@
 
 /* Teacher description*/
 
-description_teacher {
+.description_teacher {
     min-width: 552px;
+    background-image: url("/edutech/EduTech/static/img/cool_woman.webp");
+    min-height: 100%;
 }
