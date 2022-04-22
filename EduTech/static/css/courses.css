@@ -3,30 +3,6 @@
     --bg-color: rgb(226, 223, 223);
 }
 
-body {
-    margin: 0;
-    scroll-behavior: smooth;
-    background-color: var(--bg-color);
-    text-decoration: none;
-    font-family: 'Roboto', sans-serif;
-    scroll-behavior: smooth;
-}
-
-*,
-*:before,
-*:after {
-    box-sizing: border-box;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin: 0;
-}
-
 /* Courses */
 
 .courses {

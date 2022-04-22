@@ -35,7 +35,7 @@ select {
 
 .select_wrp {
 	width: 520px;
-	padding: 48px;
+	margin-top: 48px;
 	float: left;
 }
 

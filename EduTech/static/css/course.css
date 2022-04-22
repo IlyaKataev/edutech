@@ -1,0 +1,53 @@
+.item_course {
+    display: flex;
+}
+
+
+/* Course Description */
+
+.description_course {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    min-height: 100%;
+
+    padding-top: 69px;
+    padding-right: 65px;
+}
+
+.course_header {
+    text-align: inherit;
+
+    margin-bottom: 25px;
+}
+
+.course_header > h1 {
+    font-size: 44px;
+    font-weight: 600;
+    color: #333;
+
+}
+
+.btn {
+    margin-top: 45px;
+    padding: 10px 10px;
+    text-align: center;
+    align-items: center;
+
+    border: 1px solid grey;
+}
+
+.btn_link {
+    text-decoration: none;
+
+    color: grey;
+
+    font-size: 20px;
+}
+
+/* Teacher description*/
+
+description_teacher {
+    min-width: 552px;
+}
