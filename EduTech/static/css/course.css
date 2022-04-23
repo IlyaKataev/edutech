@@ -1,5 +1,7 @@
 .item_course {
     display: flex;
+
+    margin-bottom: 80px;
 }
 
 
@@ -41,6 +43,8 @@
     text-align: center;
     align-items: center;
 
+    width: 45%;
+
     border: 1px solid grey;
 }
 
@@ -55,7 +59,68 @@
 /* Teacher description*/
 
 .description_teacher {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
     min-width: 552px;
-    background-image: url("/edutech/EduTech/static/img/cool_woman.webp");
     min-height: 100%;
+
+    top: 30px;
+
+    background-image: url("../img/cool_woman.webp");
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.item_description {
+    color: #fff;
+
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 60px;
+    z-index: 1;
+
+    margin-right: 100px;
+}
+
+.item_description > h2 {
+    font-size: 24px;
+}
+
+.item_description > p {
+    font-size: 18px;
+    margin: 18px 0;
+}
+
+/* Extra description */
+
+.item_courses {
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: row;
+    justify-content: space-around;
+
+    margin: 0 auto;
+
+    width: 100%;
+}
+
+.extra {
+    padding-right: 70px;
+
+    max-width: 33.33%;
+}
+
+.extra > h2 {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    margin-bottom: 10px;
+}
+
+.extra > p {
+    font-size: 16px;
 }
