@@ -29,20 +29,17 @@
                 <div class="container_avatar">
                     <div class="avatar">
                         <img class="img_avatar" src="{% static 'img/profile.png' %}">
-                        <h3>Имя Фамилия</h3>
+                        <h3>{{ item.teacher.Name }}</h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.
+                            {{ item.teacher.Description }}
                         </p>
                     </div>
                 </div>
 
                 <div class="container_course">
                     <nav class="course_tags">
-                        <div class="item_tags">{{ item.classNumber.Number }}</div>
+                        <div class="item_tags">{{ item.classNumber.Number }} класс</div>
                         <div class="item_tags">{{ item.subject.Name }}</div>
-                        <div class="item_tags">Направление</div>
                     </nav>
                     <h2>{{ item.Name }}</h2>
                     <div class="course_description">

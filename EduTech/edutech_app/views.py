@@ -39,7 +39,7 @@ def get_base_context():
         {'link': '/teachers', 'text': 'Учителя'},
     ]
 
-    courses = Course
+    courses = Course.objects.all()
 
     return {
         'menu': menu,
@@ -59,9 +59,8 @@ def show_main(request):
 
 def show_courses(request):
     context = get_base_context()
-    teachers = Teacher.objects.all()
     courses = Course.objects.all()
-    context['courses'] = list(courses.values())
+    context['courses'] = courses
     return render(request, 'courses.html', context)
 
 

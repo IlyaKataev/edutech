@@ -15,6 +15,7 @@ class Teacher(models.Model):
     Avatar = models.ImageField
     Description = models.TextField(max_length=800)
     subject = models.ManyToManyField(Subject)
+    objects = models.Manager()
 
 
 class ClassNumber(models.Model):
@@ -24,6 +25,7 @@ class ClassNumber(models.Model):
 class Course(models.Model):
     Name = models.TextField(max_length=50)
     Description = models.TextField(max_length=800)
-    subject = models.ForeignKey(Subject, on_delete=models.CASCADE)
-    classNumber = models.ForeignKey(ClassNumber, on_delete=models.CASCADE)
-    teacher = models.ForeignKey(Teacher, on_delete=models.CASCADE)
+    subject = models.ForeignKey(to=Subject, on_delete=models.CASCADE)
+    classNumber = models.ForeignKey(to=ClassNumber, on_delete=models.CASCADE)
+    teacher = models.ForeignKey(to=Teacher, on_delete=models.CASCADE)
+    objects = models.Manager()
