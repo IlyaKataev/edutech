@@ -2,46 +2,78 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static '/css/base.css'%}">
-    <link rel="stylesheet" href="{% static '/css/course.css'%}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static '/css/base.css'%}" />
+    <link rel="stylesheet" href="{% static '/css/course.css'%}" />
     <title>CourseTitle</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     {% include "base/menu.html" %}
 
     <div class="container">
+      <section class="item_course">
+        <div class="description_course">
+          <div class="course_header">
+            <h1>Курс по подготовке к ЕГЭ по русскому языку</h1>
+            <p>
+              Подготовка за полгода<br />
+              Вы будете заниматься 2 раза в неделю по 2 академичсеких часа и
+              пройдёте всё, что нужно до экзамена
+            </p>
+          </div>
 
-        <section class="item_course">
+          <div class="btn">
+            <a class="btn_link" href="#">Перейти на трансляцию</a>
+          </div>
+        </div>
 
-            <div class="description_course">
-                <div class="course_header">
-                    <h1>Курс по подготовке к ЕГЭ по русскому языку</h1>
-                    <p>Подготовка за полгода<br> Вы будете заниматься 2 раза в неделю по 2 академичсеких часа и пройдёте
-                        всё, что нужно до экзамена</p>
-                </div>
-
-                <div class="btn">
-                    <a class="btn_link" href="#">Перейти на трансляцию</a>
-                </div>
+        <div class="description_teacher">
+            <div class="item_description">
+                <h2>Елена Андрющак</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Excepteur sint occaecat cupidatat non proident
+                </p>
             </div>
+        </div>
+      </section>
 
-            <div class="description_teacher">
-                
-            </div>
-
-        </section>
-
+      <section class="item_courses">
+        <div class="extra">
+          <h2>Lorem ipsum</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+        <div class="extra">
+          <h2>Lorem ipsum</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+        <div class="extra">
+          <h2>Lorem ipsum</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+      </section>
     </div>
 
     {% include "base/footer.html" %}
-
-</body>
-
+  </body>
 </html>
