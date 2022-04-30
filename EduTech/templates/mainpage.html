@@ -1,32 +1,50 @@
 {% load static %}
 
 <head>
-    <meta charset="utf-8">
-    <title>Edutech</title>
-    <link rel="stylesheet" href="https://snipp.ru/cdn/chosen/1.8.7/chosen.min.css">
-    <script src="https://snipp.ru/cdn/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://snipp.ru/cdn/chosen/1.8.7/chosen.jquery.min.js"></script>
-    <link rel="stylesheet" href="{% static '/css/base.css'%}" type="text/css">
-    <link rel="stylesheet" href="{% static '/css/mainpage.css'%}" type="text/css">
+  <meta charset="utf-8" />
+  <title>Edutech</title>
+  <link
+    rel="stylesheet"
+    href="https://snipp.ru/cdn/chosen/1.8.7/chosen.min.css"
+  />
+  <script src="https://snipp.ru/cdn/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://snipp.ru/cdn/chosen/1.8.7/chosen.jquery.min.js"></script>
+  <link rel="stylesheet" href="{% static '/css/base.css'%}" type="text/css" />
+  <link
+    rel="stylesheet"
+    href="{% static '/css/mainpage.css'%}"
+    type="text/css"
+  />
 </head>
 
 <body>
+  <div class="container_main">
+    <header class="header_new">
+        <div class="container">
+            <div class="header_inner">
+                <div class="header_logo">EduTech</div>
 
-    {% include "base/menu.html" %}
+                <nav class="nav">
+                    <a href="{{ '/courses' }}" class="nav__link">Курсы</a>
+                    <a href="{{ '/teachers' }}" class="nav__link">Учителя</a>
+                    <a href="{{ '/info' }}" class="nav__link">Информация</a>
 
-        <main>
-            <section>
-                <h2>EduTech - система онлайн образования, позволяющая
-                    ученикам получить знания в различных сферах. Под руководством
-                    опытных преподавателей вы сможете ....
-                </h2>
-            </section>
-            <section>
-                <h2>Наши возможности....</h2>
-            </section>
-            <section>
-                <h2>Наполнение, которое кто-то должен сочинить</h2>
-            </section>
-        </main>
-    {% include "base/footer.html" %}
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    <div class="intro">
+        <div class="container">
+            <div class="intro__inner">
+                <h1 class="intro__title">Welcome to Edutech</h1>
+                <a href="#" class="intro__btn">sign up</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
 </body>

@@ -24,15 +24,11 @@ h6 {
 }
 
 .container {
-    display: block;
     width: 100%;
     max-width: 1280px;
-    min-height: 100vh;
-    text-align: inherit;
-    margin: 100px auto;
-    box-sizing: border-box;
-    padding: 0px 36px;
+    margin: 0 auto;
 }
+
 
 /* Header */
 
