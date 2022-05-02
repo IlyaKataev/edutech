@@ -1,7 +1,8 @@
 
 
 .bg {
-  animation: slide 3s ease-in-out infinite alternate;
+  -webkit-animation: slide 3s ease-in-out infinite alternate;
+          animation: slide 3s ease-in-out infinite alternate;
   background-image: linear-gradient(-60deg, rgb(151, 231, 2) 50%, rgb(0, 240, 120) 50%);
   bottom: 0;
   left: -50%;
@@ -14,11 +15,22 @@
 
 .bg2 {
   animation-direction: alternate-reverse;
-  animation-duration: 4s;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
 }
 
 .bg3 {
-  animation-duration: 5s;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+}
+
+@-webkit-keyframes slide {
+  0% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(25%);
+  }
 }
 
 @keyframes slide {
@@ -194,6 +206,12 @@
     color: #999999;
 }
 
+.section__clients {
+    background-image:url("../img/forest.svg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
 /* About */
 
 .about {
@@ -325,3 +343,49 @@
 }
 
 /* Reviews */
+
+.clients {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 70px;
+}
+
+.clients__item {
+    width: 50%;
+    padding: 0 45px 0 175px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.client__photo {
+    position: absolute;
+    top: 0;
+    left: 40px;
+    z-index: 1;
+
+    border-radius: 50%;
+
+    width: 110px;
+    height: 110px;
+}
+
+.client__name {
+    font-size: 14px;
+    color: #333;
+    text-transform: uppercase;
+
+    margin-bottom: 5px;
+}
+
+.client__prof {
+    font-size: 15px;
+    color: #333;
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 25px;
+}
+
+.client__text {
+    color: #999;
+    font-size: 15px;
+}
