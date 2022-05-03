@@ -7,7 +7,7 @@
   bottom: 0;
   left: -50%;
   opacity: 0.5;
-  position: fixed;
+  position: absolute;
   right: -50%;
   top: 0;
   z-index: -1;
@@ -115,6 +115,7 @@
 /* Intro */
 
 .intro {
+    position: relative;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -204,12 +205,6 @@
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
     color: #999999;
-}
-
-.section__clients {
-    background-image:url("../img/forest.svg");
-    background-position: bottom;
-    background-repeat: no-repeat;
 }
 
 /* About */
@@ -388,4 +383,10 @@
 .client__text {
     color: #999;
     font-size: 15px;
+}
+
+/* Footer */
+
+.follow-list_item {
+    list-style: none;
 }
