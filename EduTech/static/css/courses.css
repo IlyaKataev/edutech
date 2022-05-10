@@ -71,16 +71,18 @@
 }
 
 .item_tags{
+    float: left;
+    position: relative;
+    overflow: hidden;
     text-align: center;
     background-color: darkgray;
     min-height: 20px;
-    min-width: 90px;
-    width: 100%;
+    min-width: 40px;
     margin-right: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
-    padding: 3px;
-    font-size: 12px;
+    padding: 8px;
+    font-size: 13px;
 }
 
 .course_description{
