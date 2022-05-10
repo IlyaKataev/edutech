@@ -59,13 +59,12 @@ def show_main(request):
 
 def show_courses(request):
     context = get_base_context()
-    courses = Course.objects.all()
-    context['courses'] = courses
     return render(request, 'courses.html', context)
 
 
-def show_course(request):
-    return render(request, 'course.html')
+def show_course(request, course_id):
+    return HttpResponse(f"Курс с id = {course_id}")
+    #return render(request, 'course.html')
 
 
 def show_info(request):

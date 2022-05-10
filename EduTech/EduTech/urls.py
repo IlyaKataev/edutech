@@ -28,6 +28,6 @@ urlpatterns = [
     path('info/', views.show_info),
     path('main/', views.show_main, name='home'),
     path('teachers/', views.show_teachers),
-    path('course/', views.show_course),
+    path('course/<int:course_id>/', views.show_course, name='course'),
 
 ]

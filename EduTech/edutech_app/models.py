@@ -1,5 +1,6 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
+from django.urls import reverse
 
 
 class User(AbstractUser):
@@ -29,3 +30,6 @@ class Course(models.Model):
     classNumber = models.ForeignKey(to=ClassNumber, on_delete=models.CASCADE)
     teacher = models.ForeignKey(to=Teacher, on_delete=models.CASCADE)
     objects = models.Manager()
+
+    def get_absolute_url(self):
+        return reverse('course', kwargs={'course_id': self.pk})
