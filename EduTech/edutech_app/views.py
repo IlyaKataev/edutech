@@ -1,4 +1,5 @@
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.views import View
 from .forms import UserCreationForm
@@ -33,10 +34,9 @@ class Register(View):
 
 def get_base_context():
     menu = [
-        {'link': '/info', 'text': 'Информация'},
-        {'link': '/courses', 'text': 'Курсы'},
         {'link': '/main', 'text': 'Главная'},
-        {'link': '/teachers', 'text': 'Учителя'},
+        {'link': '/courses', 'text': 'Курсы'},
+        {'link': '/profile', 'text': 'Профиль'},
     ]
 
     courses = Course.objects.all()
@@ -68,11 +68,7 @@ def show_course(request, course_id):
     return render(request, 'course.html', context)
 
 
-def show_info(request):
-    context = get_base_context()
-    return render(request, 'infopage.html', context)
-
-
-def show_teachers(request):
-    context = get_base_context()
-    return render(request, 'teachers.html', context)
+# @login_required
+# def show_profile(request):
+#     context = get_base_context()
+#     return render(request, 'profile.html', context)
