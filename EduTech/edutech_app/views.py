@@ -36,7 +36,7 @@ def get_base_context():
     menu = [
         {'link': '/main', 'text': 'Главная'},
         {'link': '/courses', 'text': 'Курсы'},
-        {'link': '/profile', 'text': 'Профиль'},
+        # {'link': '/profile', 'text': 'Профиль'},
     ]
 
     courses = Course.objects.all()
