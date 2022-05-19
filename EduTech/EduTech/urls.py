@@ -25,7 +25,7 @@ urlpatterns = [
     path('users/register/', views.Register.as_view(), name='register'),
     path('stream/', views.show_stream),
     path('courses/', views.show_courses),
-    # path('profile/', views.show_profile),
+    path('profile/', views.show_profile),
     path('main/', views.show_main, name='home'),
     path('course/<int:course_id>/', views.show_course, name='course'),
 

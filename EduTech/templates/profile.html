@@ -1,0 +1,36 @@
+{% load static %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/css/base.css'%}?version=1">
+    <link rel="stylesheet" href="{% static '/css/profile.css'%}?version=1">
+    <title>EduTech</title>
+</head>
+
+<body>
+    {% include "base/menu.html" %}
+    <div id="profile-main">
+        <div id="profile">
+            <div id="avatar"> <img src="{% static '/img/profile.png' %}"> </div>
+            <div id="name">Константинов Константин Александрович</div>
+            <div id="email"><a href="mailto:kostja@konstantinov.org">kostja@konstantinov.org</a></div>
+        </div>
+        <div id="history">
+            <div id="courselist">
+                <ul>
+                    <li>Математика. 3 класс - пройден</li>
+                    <li>Математика. 4 класс - пройден</li>
+                    <li>Математика. 5 класс - пройден</li>
+                    <li>Математика. 6 класс - зарегистрирован</li>
+                    <li>Математика. 7 класс - зарегистрирован</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    {% include "base/footer.html" %}
+</body>
+</html>

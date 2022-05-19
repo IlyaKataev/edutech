@@ -1,0 +1,67 @@
+#profile-main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#profile a {
+    text-decoration: none;
+    color: black;
+}
+
+#avatar {
+    width: 200px;
+    height: 200px;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    border-radius: 200px;
+    overflow: hidden;
+    border-color: yellow;
+    border-width: 4px;
+    border-style: solid;
+}
+
+#avatar img {
+    width: 100%;
+    height: 100%;
+}
+
+#name {
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+#email {
+    font-family: sans-serif;
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+#history {
+    flex-grow: 1;
+}
+
+#courselist {
+    border-color: black;
+    background-color: cornsilk;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    margin: 20px;
+    height: 90%;
+    box-shadow: 2px 2px 0 0 rgb(0 0 0 / 10%);
+}
+
+#courselist li {
+    font-family: sans-serif;
+    line-height: 1.5em;
+}

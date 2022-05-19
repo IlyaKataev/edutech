@@ -7,13 +7,27 @@ from django.http import HttpResponse
 from .models import Teacher, Course, ClassNumber, Subject
 
 
+def get_base_context():
+    menu = [
+        {'link': '/main', 'text': 'Главная'},
+        {'link': '/courses', 'text': 'Курсы'},
+        {'link': '/profile', 'text': 'Профиль'},
+    ]
+
+    courses = Course.objects.all()
+
+    return {
+        'menu': menu,
+        'courses': courses,
+    }
+
+
 class Register(View):
     template_name = 'registration/register.html'
 
     def get(self, request):
-        context = {
-            'form': UserCreationForm()
-        }
+        context = get_base_context()
+        context['form'] = UserCreationForm()
         return render(request, self.template_name, context)
 
     def post(self, request):
@@ -26,25 +40,11 @@ class Register(View):
             user = authenticate(username=username, password=password)
             login(request, user)
             return redirect('home')
+
         context = {
             'form': form
         }
         return render(request, self.template_name, context)
-
-
-def get_base_context():
-    menu = [
-        {'link': '/main', 'text': 'Главная'},
-        {'link': '/courses', 'text': 'Курсы'},
-        # {'link': '/profile', 'text': 'Профиль'},
-    ]
-
-    courses = Course.objects.all()
-
-    return {
-        'menu': menu,
-        'courses': courses,
-    }
 
 
 def show_stream(request):
@@ -69,6 +69,6 @@ def show_course(request, course_id):
 
 
 # @login_required
-# def show_profile(request):
-#     context = get_base_context()
-#     return render(request, 'profile.html', context)
+def show_profile(request):
+    context = get_base_context()
+    return render(request, 'profile.html', context)
