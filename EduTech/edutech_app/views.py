@@ -31,7 +31,9 @@ class Register(View):
         return render(request, self.template_name, context)
 
     def post(self, request):
+        context = get_base_context()
         form = UserCreationForm(request.POST)
+        context['form'] = form
 
         if form.is_valid():
             form.save()
@@ -41,9 +43,6 @@ class Register(View):
             login(request, user)
             return redirect('home')
 
-        context = {
-            'form': form
-        }
         return render(request, self.template_name, context)
 
 
