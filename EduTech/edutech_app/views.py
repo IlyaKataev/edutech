@@ -4,21 +4,13 @@ from django.shortcuts import render, redirect
 from django.views import View
 from .forms import UserCreationForm
 from django.http import HttpResponse
-from .models import Teacher, Course, ClassNumber, Subject
+from .models import User, Teacher, Course, ClassNumber, Subject
 
 
 def get_base_context():
-    menu = [
-        {'link': '/main', 'text': 'Главная'},
-        {'link': '/courses', 'text': 'Курсы'},
-        {'link': '/profile', 'text': 'Профиль'},
-    ]
-
-    courses = Course.objects.all()
 
     return {
-        'menu': menu,
-        'courses': courses,
+        'courses': Course.objects.all(),
     }
 
 
@@ -70,4 +62,6 @@ def show_course(request, course_id):
 # @login_required
 def show_profile(request):
     context = get_base_context()
+    context['name'] = User.objects.get(id=1)
+    context['email'] = User.objects.all()
     return render(request, 'profile.html', context)

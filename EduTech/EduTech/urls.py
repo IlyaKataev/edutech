@@ -21,10 +21,10 @@ import edutech_app.views as views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.show_main),
-    path('users/', include('django.contrib.auth.urls')),
-    path('users/register/', views.Register.as_view(), name='register'),
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/register/', views.Register.as_view(), name='register'),
     path('stream/', views.show_stream),
-    path('courses/', views.show_courses),
+    path('courses/', views.show_courses, name='courses'),
     path('profile/', views.show_profile),
     path('main/', views.show_main, name='home'),
     path('course/<int:course_id>/', views.show_course, name='course'),
