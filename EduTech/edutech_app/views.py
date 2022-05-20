@@ -48,20 +48,22 @@ def show_main(request):
     return render(request, 'mainpage.html', context)
 
 
+@login_required
 def show_courses(request):
     context = get_base_context()
     return render(request, 'courses.html', context)
 
 
+@login_required
 def show_course(request, course_id):
     context = get_base_context()
     context['course'] = Course.objects.get(id=course_id)
     return render(request, 'course.html', context)
 
 
-# @login_required
+@login_required
 def show_profile(request):
     context = get_base_context()
-    context['name'] = User.objects.get(id=1)
-    context['email'] = User.objects.all()
+    context['name'] = request.user.username
+    context['email'] = request.user.email
     return render(request, 'profile.html', context)
