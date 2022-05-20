@@ -35,7 +35,6 @@ h6 {
 
 .header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     width: 100%;
     position: absolute;
@@ -45,6 +44,7 @@ h6 {
     z-index: 100;
     background-color: black;
     padding: 5px 0;
+    justify-content: space-between;
 }
 
 .header__logo {
