@@ -4,22 +4,21 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Edutech</title>
+    <title>Регистрация</title>
     <link rel="stylesheet" href="{% static '/css/base.css'%}?version=1" />
     <link rel="stylesheet" href="{% static '/css/register.css'%}?version=1" type="text/css">
 </head>
 
 <body>
     {% include "base/menu.html" %}
-
-    <h1>Регистрация</h1>
-    <p>Заполните эту форму, чтобы создать аккаунт.</p>
-
-    <form action="{% url 'register' %}" method="post">
-        {{ form }}
-        {% csrf_token %}
-        <button type="submit" class="btn btn-default btn-lg">submit</button>
-    </form>
+    <div class="rofl__container">
+        <h1>Регистрация</h1>
+        <form action="{% url 'register' %}" method="post">
+            {{ form }}
+            {% csrf_token %}
+            <button type="submit" class="btn btn-default btn-lg">submit</button>
+        </form>
+    </div>
 
     {% include "base/footer.html" %}
 </body>
