@@ -41,3 +41,7 @@ class Course(models.Model):
 
     def get_absolute_url(self):
         return reverse('course', kwargs={'course_id': self.pk})
+
+
+class StartedCourse(models.Model):
+    name = models.ForeignKey(to=Course, on_delete=models.CASCADE)

@@ -38,6 +38,7 @@ class Register(View):
         return render(request, self.template_name, context)
 
 
+@login_required
 def show_stream(request):
     context = get_base_context()
     return render(request, 'stream.html', context)
@@ -67,3 +68,14 @@ def show_profile(request):
     context['name'] = request.user.username
     context['email'] = request.user.email
     return render(request, 'profile.html', context)
+
+
+@login_required
+def add_course(request):
+    if request.method == 'POST':
+        form = FieldForm(request.POST)
+        if form.is_valid():
+            add = form.save(commit=False)
+            add.save()
+    return redirect('/fields/')
+
