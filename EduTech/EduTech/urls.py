@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include, reverse_lazy
+from django.urls import path, include
 from django.views.generic import TemplateView
 import edutech_app.views as views
 
@@ -23,9 +23,10 @@ urlpatterns = [
     path('', views.show_main),
     path('courses/', views.show_courses, name='courses'),
     path('accounts/', include('django.contrib.auth.urls')),
-    path('accounts/register/', views.Register.as_view(success_url=reverse_lazy('courses')), name='register'),
+    path('accounts/register/', views.Register.as_view(), name='register'),
     path('stream/', views.show_stream),
     path('profile/', views.show_profile),
     path('main/', views.show_main, name='home'),
     path('course/<int:course_id>/', views.show_course, name='course'),
+
 ]

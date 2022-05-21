@@ -14,7 +14,7 @@ class Subject(models.Model):
 
 class Teacher(models.Model):
     name = models.TextField(max_length=50)
-    avatar = models.ImageField
+    avatar = models.ImageField()
     description = models.TextField(max_length=800)
     subject = models.ManyToManyField(Subject)
     objects = models.Manager()
