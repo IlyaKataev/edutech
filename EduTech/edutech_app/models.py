@@ -44,4 +44,6 @@ class Course(models.Model):
 
 
 class StartedCourse(models.Model):
-    name = models.ForeignKey(to=Course, on_delete=models.CASCADE)
+    name = models.TextField(max_length=50)
+    classNumber = models.IntegerField()
+    objects = models.Manager()
