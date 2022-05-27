@@ -83,6 +83,7 @@
     z-index: 1;
 
     margin-right: 100px;
+    background-color: rgba(0, 0, 0, .5);
 }
 
 .item_description > h2 {
