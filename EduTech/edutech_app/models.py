@@ -43,7 +43,7 @@ class Course(models.Model):
         return reverse('course', kwargs={'course_id': self.pk})
 
 
-class StartedCourse(models.Model):
-    name = models.TextField(max_length=50)
-    classNumber = models.IntegerField()
-    objects = models.Manager()
+# class StartedCourse(models.Model):
+#     name = models.TextField(max_length=50)
+#     classNumber = models.IntegerField()
+#     objects = models.Manager()
