@@ -4,7 +4,7 @@ from django.shortcuts import render, redirect
 from django.views import View
 from .forms import UserCreationForm
 from django.http import HttpResponse
-from .models import User, Teacher, Course, ClassNumber, Subject
+from .models import User, Teacher, Course, ClassNumber, Subject, CurrentCourse
 
 
 def get_base_context():
@@ -57,6 +57,12 @@ def show_courses(request):
 
 @login_required
 def show_course(request, course_id):
+
+    if not CurrentCourse.objects.filter(c_course_id=course_id).exists():
+        current_course = CurrentCourse(c_course_id=course_id,
+                                       c_name=Course.objects.get(id=course_id).name,
+                                       c_classNumber=Course.objects.get(id=course_id).classNumber.number)
+        current_course.save()
     context = get_base_context()
     context['course'] = Course.objects.get(id=course_id)
     return render(request, 'course.html', context)
@@ -67,4 +73,5 @@ def show_profile(request):
     context = get_base_context()
     context['name'] = request.user.username
     context['email'] = request.user.email
+    context['current_courses'] = CurrentCourse.objects.all()
     return render(request, 'profile.html', context)

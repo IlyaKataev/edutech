@@ -21,7 +21,7 @@ class Teacher(models.Model):
 
 
 class ClassNumber(models.Model):
-    number = models.TextField(max_length=50)
+    number = models.IntegerField()
     objects = models.Manager()
 
 
@@ -43,7 +43,8 @@ class Course(models.Model):
         return reverse('course', kwargs={'course_id': self.pk})
 
 
-# class StartedCourse(models.Model):
-#     name = models.TextField(max_length=50)
-#     classNumber = models.IntegerField()
-#     objects = models.Manager()
+class CurrentCourse(models.Model):
+    c_course_id = models.IntegerField()
+    c_name = models.TextField(max_length=60)
+    c_classNumber = models.IntegerField()
+    objects = models.Manager()
