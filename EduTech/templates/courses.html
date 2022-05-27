@@ -25,7 +25,7 @@
 
                 <div class="container_avatar">
                     <div class="avatar">
-                        <img class="img_avatar" src="{{ item.teacher.avatar.url }}">
+                        <img class="img_avatar" src="{% static 'img/ours_teachers/squared_teacher' %}{{ item.teacher.id }}.jpg">
                         <h3>{{ item.teacher.name }}</h3>
                         <p>
                             {{ item.teacher.description }}

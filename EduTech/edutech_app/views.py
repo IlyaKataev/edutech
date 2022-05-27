@@ -57,7 +57,6 @@ def show_courses(request):
 
 @login_required
 def show_course(request, course_id):
-
     if not CurrentCourse.objects.filter(c_course_id=course_id).exists():
         current_course = CurrentCourse(c_course_id=course_id,
                                        c_name=Course.objects.get(id=course_id).name,
