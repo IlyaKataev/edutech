@@ -3,12 +3,11 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.views import View
 from .forms import UserCreationForm
-from django.http import HttpResponse
+from django.http import HttpResponseRedirect
 from .models import Course, CurrentCourse
 
 
 def get_base_context():
-
     return {
         'courses': Course.objects.all(),
     }
@@ -18,6 +17,8 @@ class Register(View):
     template_name = 'registration/register.html'
 
     def get(self, request):
+        if request.user.is_authenticated:
+            return HttpResponseRedirect('/')
         context = get_base_context()
         context['form'] = UserCreationForm()
         return render(request, self.template_name, context)
@@ -46,6 +47,10 @@ def show_stream(request):
 
 def show_main(request):
     context = get_base_context()
+    if request.user.is_authenticated:
+        context['url'] = '/courses'
+    else:
+        context['url'] = '/accounts/register/'
     return render(request, 'mainpage.html', context)
 
 
