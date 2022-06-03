@@ -4,7 +4,7 @@ from django.shortcuts import render, redirect
 from django.views import View
 from .forms import UserCreationForm
 from django.http import HttpResponse
-from .models import User, Teacher, Course, ClassNumber, Subject, CurrentCourse
+from .models import Course, CurrentCourse
 
 
 def get_base_context():
