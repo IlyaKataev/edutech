@@ -45,7 +45,7 @@ class Course(models.Model):
 
 class CurrentCourse(models.Model):
     email = models.TextField()
-    c_course_id = models.IntegerField()
-    c_name = models.TextField(max_length=60)
+    course_id = models.IntegerField()
+    name = models.TextField(max_length=60)
     class_number = models.IntegerField()
     objects = models.Manager()
