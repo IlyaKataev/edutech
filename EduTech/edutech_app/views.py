@@ -3,12 +3,11 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.views import View
 from .forms import UserCreationForm
-from django.http import HttpResponse
-from .models import User, Teacher, Course, ClassNumber, Subject, CurrentCourse
+from django.http import HttpResponseRedirect
+from .models import Course, CurrentCourse
 
 
 def get_base_context():
-
     return {
         'courses': Course.objects.all(),
     }
@@ -18,6 +17,8 @@ class Register(View):
     template_name = 'registration/register.html'
 
     def get(self, request):
+        if request.user.is_authenticated:
+            return HttpResponseRedirect('/')
         context = get_base_context()
         context['form'] = UserCreationForm()
         return render(request, self.template_name, context)
@@ -46,6 +47,10 @@ def show_stream(request):
 
 def show_main(request):
     context = get_base_context()
+    if request.user.is_authenticated:
+        context['url'] = '/courses'
+    else:
+        context['url'] = '/accounts/register/'
     return render(request, 'mainpage.html', context)
 
 
@@ -57,10 +62,10 @@ def show_courses(request):
 
 @login_required
 def show_course(request, course_id):
-    if not CurrentCourse.objects.filter(email=request.user.email, c_course_id=course_id).exists():
-        current_course = CurrentCourse(c_course_id=course_id,
-                                       c_name=Course.objects.get(id=course_id).name,
-                                       c_classNumber=Course.objects.get(id=course_id).classNumber.number,
+    if not CurrentCourse.objects.filter(email=request.user.email, course_id=course_id).exists():
+        current_course = CurrentCourse(course_id=course_id,
+                                       name=Course.objects.get(id=course_id).name,
+                                       class_number=Course.objects.get(id=course_id).class_number.number,
                                        email=request.user.email)
         current_course.save()
     context = get_base_context()

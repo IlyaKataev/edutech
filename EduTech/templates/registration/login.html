@@ -1,5 +1,9 @@
 {% load static %}
 
+{% if user.is_authenticated %}
+  <meta http-equiv="refresh" content="0;URL=http://127.0.0.1:8000/" />
+{% endif %}
+
 <head>
   <meta charset="utf-8" />
   <title>Edutech</title>
@@ -28,7 +32,7 @@
   <p>Вам тут не рады</p>
   {% else %}
   <p>Войдите в аккаунт пж</p>
-  {% endif %} {% endif %} {% include "base/menu.html" %}
+  {% endif %} {% endif %} {% include "base/anon_menu.html" %}
   <div class="rofl__container">
     <h1>Авторизация</h1>
     <p>Заполните эту форму, чтобы войти.</p>
