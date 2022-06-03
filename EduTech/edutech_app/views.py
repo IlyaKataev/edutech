@@ -57,10 +57,11 @@ def show_courses(request):
 
 @login_required
 def show_course(request, course_id):
-    if not CurrentCourse.objects.filter(c_course_id=course_id).exists():
+    if not CurrentCourse.objects.filter(email=request.user.email, c_course_id=course_id).exists():
         current_course = CurrentCourse(c_course_id=course_id,
                                        c_name=Course.objects.get(id=course_id).name,
-                                       c_classNumber=Course.objects.get(id=course_id).classNumber.number)
+                                       c_classNumber=Course.objects.get(id=course_id).classNumber.number,
+                                       email=request.user.email)
         current_course.save()
     context = get_base_context()
     context['course'] = Course.objects.get(id=course_id)
@@ -72,5 +73,5 @@ def show_profile(request):
     context = get_base_context()
     context['name'] = request.user.username
     context['email'] = request.user.email
-    context['current_courses'] = CurrentCourse.objects.all()
+    context['current_courses'] = CurrentCourse.objects.filter(email=request.user.email)
     return render(request, 'profile.html', context)
