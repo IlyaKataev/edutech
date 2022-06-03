@@ -65,7 +65,7 @@ def show_course(request, course_id):
     if not CurrentCourse.objects.filter(email=request.user.email, c_course_id=course_id).exists():
         current_course = CurrentCourse(c_course_id=course_id,
                                        c_name=Course.objects.get(id=course_id).name,
-                                       c_classNumber=Course.objects.get(id=course_id).classNumber.number,
+                                       c_classNumber=Course.objects.get(id=course_id).class_number.number,
                                        email=request.user.email)
         current_course.save()
     context = get_base_context()
