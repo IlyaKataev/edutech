@@ -24,7 +24,7 @@
                 <h2>Начатые курсы</h2>
                 <ul>
                     {% for item in current_courses %}
-                        <li>{{ item.name }} {{ item.class_number }} класс</li>
+                        <li><a class="course_link" href="/course/{{item.course_id}}">{{ item.name }} {{ item.class_number }} класс</a></li>
                     {% endfor %}
                 </ul>
             </div>
