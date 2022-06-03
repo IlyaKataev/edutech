@@ -4,11 +4,12 @@
         <div class="header__logo">
             <a href="{{ '/main' }}"> <img src="{% static '/img/edutech-logo.svg' %}" width="50" height="50"></a>
             <a class="logo__name" href="{{ '/main' }}"><h1>EduTech</h1></a>
-<!--            <a class="nav__link" href="/main">Главная</a>-->
             <a class="nav__link" href="/courses">Курсы</a>
             <a class="nav__link" href="/profile">Профиль</a>
         </div>
         <nav class="nav">
-            <a class="nav__link" href="{{ '/accounts/logout' }}" >Sign out</a>
+            {% for url, text in buttons.items %}
+            <a class="nav__link" href="{{ url }}">{{ text }}</a>
+            {% endfor %}
         </nav>
 </header>
